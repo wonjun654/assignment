@@ -1,10 +1,26 @@
 package com.kh.assignment;
 
-public class Assignment1 {
+import java.util.Scanner;
 
-	
-	/*ÃÖ¿øÁØ ¹®Á¦
-	 * Á¤·ÄµÈ Á¤¼ö ¹è¿­¾È¿¡ ÀÔ·Â¹ŞÀº Á¤¼ö°¡ ÀÖ´ÂÁö È®ÀÎÇÏ¼¼¿ä
-	 * ¹è¿­¾È Á¤¼ö´Â {1,5,8,9} ÀÔ´Ï´Ù.
+
+public class Assignment1 {
+	/*ìµœì›ì¤€ ë¬¸ì œ
+	 * ì •ë ¬ëœ ì •ìˆ˜ ë°°ì—´ì•ˆì— ì…ë ¥ë°›ì€ ì •ìˆ˜ê°€ ìˆëŠ”ì§€ í™•ì¸í•˜ì„¸ìš”
+	 * ë°°ì—´ì•ˆ ì •ìˆ˜ëŠ” {1,5,8,9} ì…ë‹ˆë‹¤.
 	*/
-}
+	
+	//
+	// ì‚¬ìš©ìì—ê²Œ ê¸ˆì•¡ì„ ì…ë ¥ë°›ì•„ ê±°ìŠ¤ë¦„ëˆì„ ì£¼ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±. ë°°ì—´ì‚¬ìš©. 
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		 int[] coinUnit = { 50000,10000,5000,1000,500, 100, 50, 10 };
+		 System.out.println("ê¸ˆì•¡ ì…ë ¥ : ");
+		    int money = sc.nextInt();
+		    System.out.println("money=" + money);
+		    for (int i = 0; i < coinUnit.length; i++) {
+		        System.out.println(coinUnit[i]+"ì›: "+ money / coinUnit[i]);
+		        money %= coinUnit[i];
+		    }
+	}
+
